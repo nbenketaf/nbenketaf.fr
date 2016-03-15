@@ -67,6 +67,7 @@ abbr[title] {
 
 b,
 strong {
+	font-family: ocp-bold;
     font-weight: 700
 }
 
