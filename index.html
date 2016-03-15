@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" maximum-scale="1">
+	<meta name="description" content="Freelance developer - Paris">
+	<meta name="keywords" content="nbenketaf, Nabil Benketaf, Freelance, Java Development, Nabil, Benketaf, Paris Developer">
+	<title>Nabil Benketaf - Freelance Developer</title>
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+</head>
+<body>
+<div class="wrap">
+	<div class="left">
+		<p class="yellow desktop-toggle">" Press ? for help</p>
+		<p class="yellow mobile-toggle">" Press ? for help</p>
+		<p><span class="red">&lt;/</span>nbenketaf.fr<span class="red">/</span></p>
+		<div id="dir">
+			<p><span class="blue">&nbsp;&#9654;&nbsp;</span><a id="readme" href="#">README</a></p>
+			<!--<div id="projects">
+				<p><span class="blue">&nbsp;&#9654;&nbsp;</span>projects<span class="red">/</span></p>
+				<div class="inner">
+					<p><a href="" target="_blank"><span class="blue">&nbsp;#9654;&nbsp;</span></a></p>
+					<p><a href="" target="_blank"><span class="blue">&nbsp;#9654;&nbsp;</span></a></p>
+				</div>
+			</div>-->
+			<div id="social">
+				<p><span class="blue">&nbsp;&#9654;&nbsp;</span>other<span class="red">/</span></p>
+				<div class="inner">
+					<p><a href="https://twitter.com/nbenketaf" target="_blank"><span class="blue">&nbsp;&#9654;&nbsp;</span>twitter</a></p>
+					<p><a href="https://github.com/nbenketaf" target="_blank"><span class="blue">&nbsp;&#9654;&nbsp;</span>github</a></p>
+					<p><a href="https://fr.linkedin.com/in/nbenketaf" target="_blank"><span class="blue">&nbsp;&#9654;&nbsp;</span>linkedin</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="shrug">
+			<p class="white">follow ur heart</p>
+			<h2>¯\_(ツ)_/¯</h2>
+		</div>
+	<div class="right">
+		<div class="line">
+			<div class="num">&nbsp;1</div>
+			<div class="text">
+				<p><span class="red">#</span> <span class="orange bold">Nabil Benketaf</span> <span class="red">#</span></p>
+			</div>
+		</div>
+		
+		<div class="line">
+			<div class="num">&nbsp;2</div>
+		</div>
+
+		<div class="line">
+			<div class="num">&nbsp;3</div>
+			<div class="text">
+				<p class="white">Freelance Developer</p>
+			</div>
+		</div>
+
+		<div class="line">
+			<div class="num">&nbsp;4</div>
+			<div class="text">
+				<p class="white">Paris, France</p>
+			</div>
+		</div>
+
+		<div class="line">
+			<div class="num">&nbsp;5</div>
+		</div>
+		
+		<div class="line">
+			<div class="num">&nbsp;6</div>
+			<div class="text">
+				<p class="white"></p>
+			</div>
+		</div>
+
+		<div class="line">
+			<div class="num">&nbsp;7</div>
+		</div>
+		
+		<div class="line">
+			<div class="num">&nbsp;8</div>
+				<div class="text">
+				<p class="white"></p>
+			</div>
+		</div>
+
+		<div class="line">
+			<div class="num">&nbsp;9</div>
+		
+		</div>
+		
+		<div class="line">
+			<div class="num">10</div>
+			<div class="text">
+				<p><a class="green" href="mailto:nbenketaf@gmail.com">nbenketaf@gmail.com</a></p>
+			</div>
+		</div>
+
+	</div>
+	<div id="footer">
+		<div class="status-bar bar-left">
+			<span class="bar bar-left bar-active">NERD</span><div class="triangle bar-left bar-active"></div>
+		</div>
+		<div class="status-bar bar-right">
+			<span class="bar bar-active">NORMAL</span><div class="triangle bar-active"></div>
+			<span class="bar bar-active branch"><span class="branch-symbol"></span>&nbsp;master</span>
+			<div class="triangle bar-active inactive"></div>
+			<span class="base01">&nbsp; nbenketaf.fr/README</span>
+		</div>
+	</div>
+</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$('#readme').on('click', function(){
+			$('.right').show();
+			$('.bar-right').show();
+			$('.bar-left').addClass('inactive');
+		});
+		$('.mobile-toggle').on('click', function(){
+			$('.shrug').addClass('slidey');
+		});
+		$(document).keydown(function(e) {
+	        if(e.keyCode == 191) {
+	        	var shrug = $('.shrug');
+	           	shrug.addClass('slidey').delay(8000).queue(function(){
+	           	shrug.removeClass('slidey');
+	           	shrug.dequeue();
+	        });
+	     }
+     });
+	});
+	</script>
+</body>
+</html>
