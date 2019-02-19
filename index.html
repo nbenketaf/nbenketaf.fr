@@ -25,7 +25,7 @@
 	<p class="yellow mobile-toggle">" Press ? for help</p>
 	<p><span class="red">&lt;/</span>nbenketaf.fr<span class="red">/</span></p>
 	<div id="dir">
-	  <p><span class="blue">&nbsp;&#9654;&nbsp;</span><a id="readme" href="#">README</a></p>
+	  <p><span class="blue">&nbsp;&#9654;&nbsp;</span><span class="readme-toggle" id="readme">README</span></p>
 	  <!--<div id="projects">
 	      <p><span class="blue">&nbsp;&#9654;&nbsp;</span>projects<span class="red">/</span></p>
 	      <div class="inner">
@@ -120,7 +120,7 @@
 	</div>
       </div>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
 	$(function(){
 		$('#readme').on('click', function(){
@@ -141,6 +141,32 @@
 	     }
 	});
 	});
-    </script>
+		</script> -->
+		
+		<script>
+			const readmeToggler = document.querySelector('.readme-toggle')
+
+			const rightPanel = document.querySelector('.right');
+			const rightBar = document.querySelector('.bar-right');
+			const leftBar = document.querySelector('.bar-left');
+			
+			const shrug = document.querySelector('.shrug');
+
+			function showReadme() {
+				rightPanel.classList.add('active');
+				rightBar.classList.add('active');
+				leftBar.classList.add('inactive');
+			}
+
+			readmeToggler.addEventListener('click', showReadme)
+			document.addEventListener('keydown', function(e) {
+				if(e.keyCode == 191) {
+					shrug.classList.add('slidey');
+					setTimeout(function() {
+  					shrug.classList.remove('slidey');
+					}, 8000);
+				}
+			})
+		</script>
   </body>
 </html>
