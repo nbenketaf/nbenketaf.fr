@@ -544,7 +544,7 @@ a:focus {
 }
 
 .right {
-    display: none;
+    display: block;
     width: 75%;
     float: left;
     padding: 10px;
@@ -612,7 +612,7 @@ a:focus {
 
 .status-bar.bar-right {
     position: relative;
-    display: none;
+    /* display: none; */
     background-color: #00343F;
     float: left;
     width: 80%
@@ -668,4 +668,21 @@ a:focus {
 
 .triangle.inactive {
     border-left: 9px solid #5B727A
+}
+
+
+.readme-toggle {
+    color: #839496;
+    cursor: pointer;
+}
+
+.bar-right,
+.right {
+    opacity: 0;
+    pointer-events: none;
+}
+.bar-right.active,
+.right.active {
+    opacity: 1;
+    pointer-events: all;
 }
